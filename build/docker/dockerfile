@@ -3,7 +3,6 @@ FROM node:14.18-alpine as development
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install
-RUN npm run start:dev
 
 FROM node:14.18-alpine as production
 

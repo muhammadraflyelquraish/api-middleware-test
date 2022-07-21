@@ -15,12 +15,10 @@ services:
       - "JWT_SUPER_SECRET=${JWT_SUPER_SECRET}"
       - "JWT_EXPIRE_IN=${JWT_EXPIRE_IN}"
       - "THEAPI_ENDPOINT=${THEAPI_ENDPOINT}"
-    ports:
-      - "${PORT_OUT}:${PORT_IN}"
     networks:
-      - swj-networks
+      - kunci_network
     restart: unless-stopped
     
 networks:
-    medisy-networks:
-        external: true
+    kunci_network:
+        name: "kunci_network"
